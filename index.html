@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Idul Fitri Ultimate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>Kuis Idul Fitri</h1>
+    <p>Mode Level & Statistik 📊</p>
+  </header>
+
+  <main>
+
+    <!-- MENU -->
+    <div id="menu">
+      <select id="levelSelect">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button class="primary" onclick="startQuiz()">Mulai Kuis</button>
+      <button onclick="showLeaderboard()">Leaderboard</button>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="quizBox" class="hidden">
+      <div class="topbar">
+        <span id="progress"></span>
+        <span id="timer"></span>
+        <span id="score"></span>
+      </div>
+
+      <h2 id="question"></h2>
+      <div id="answers"></div>
+    </div>
+
+    <!-- STATISTIK -->
+    <div id="resultBox" class="hidden">
+      <h2>Hasil Kuis 📊</h2>
+      <p id="finalScore"></p>
+      <p id="correctStat"></p>
+      <p id="wrongStat"></p>
+      <button onclick="backToMenu()">Kembali ke Menu</button>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div id="leaderboardBox" class="hidden">
+      <h2>🏆 Leaderboard</h2>
+      <ul id="leaderboardList"></ul>
+      <button onclick="backToMenu()">Kembali</button>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
