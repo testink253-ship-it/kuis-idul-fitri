@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Idul Fitri</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Kuis Edukasi Idul Fitri</h1>
+
+  <div id="menu">
+    <input type="text" id="username" placeholder="Masukkan Nama">
+    <button onclick="startQuiz()">Mulai Kuis</button>
+  </div>
+
+  <div id="quiz" class="hidden">
+    <div class="top-bar">
+      <span>⏱ Waktu: <span id="timer">30</span></span>
+      <span>⭐ Poin: <span id="score">0</span></span>
+    </div>
+
+    <h2 id="question"></h2>
+    <div id="answers"></div>
+  </div>
+
+  <div id="result" class="hidden">
+    <h2>Kuis Selesai!</h2>
+    <p>Total Poin: <span id="finalScore"></span></p>
+    <button onclick="saveScore()">Simpan Skor</button>
+    <button onclick="location.reload()">Main Lagi</button>
+  </div>
+
+  <div class="leaderboard">
+    <h3>🏆 Leaderboard</h3>
+    <ul id="leaderboardList"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
